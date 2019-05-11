@@ -2,10 +2,13 @@
   "name": "liftio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "client-install": "cd client && npm install",
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,13 @@
   "homepage": "https://github.com/rtsai0104/liftio#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "mongodb": "^3.2.4",
     "mongoose": "^5.5.7",
-    "nodemon": "^1.19.0",
     "uikit": "^3.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
   }
 }
