@@ -5,6 +5,7 @@ import logo from './logo.svg'
 import './App.css'
 import store from './store'
 import Customers from './components/Customer/customers'
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
 
@@ -18,7 +19,7 @@ class App extends Component {
           </header>
           <Customers/>
           <div>Hello</div>
-          <Button variant="primary">STUPID SHIT NIGGA</Button>
+          <Button variant="outline-primary">Primary</Button>
         </div>
       </Provider>
     )
