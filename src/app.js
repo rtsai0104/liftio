@@ -1,7 +1,8 @@
 const express = require('express');
+// require('./db/mongoose');
 
 const app = express();
-const PORT = precess.env.port || 3000;
+const PORT = process.env.port || 3000;
 
 app.get('', (req, res) => {
   res.send('HI');
