@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
+import { Button } from 'react-bootstrap'
 import logo from './logo.svg'
 import './App.css'
 import store from './store'
@@ -16,6 +17,8 @@ class App extends Component {
             <h1 className="App-title">React/Redux Express Starter</h1>
           </header>
           <Customers/>
+          <div>Hello</div>
+          <Button>STUPID SHIT NIGGA</Button>
         </div>
       </Provider>
     )
