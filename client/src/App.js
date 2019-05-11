@@ -18,7 +18,7 @@ class App extends Component {
           </header>
           <Customers/>
           <div>Hello</div>
-          <Button>STUPID SHIT NIGGA</Button>
+          <Button variant="primary">STUPID SHIT NIGGA</Button>
         </div>
       </Provider>
     )
