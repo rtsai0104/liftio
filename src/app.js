@@ -13,6 +13,7 @@ router.get('/about',function(req,res){
   res.sendFile(path.join(__dirname+'/about.html'));
 });
 
+<<<<<<< HEAD
 router.get('/sitemap',function(req,res){
   res.sendFile(path.join(__dirname+'/sitemap.html'));
 });
@@ -23,6 +24,17 @@ app.use(express.static(__dirname + '/views'));
 //Store all HTML files in view folder.
 app.use(express.static(__dirname + '/scripts'));
 //Store all JS and CSS in Scripts folder.
+=======
+app.get('/api/customers', (req, res) => {
+  const customers = [
+    {id: 1, firstName: 'John', lastName: 'Doe'},
+    {id: 2, firstName: 'Brad', lastName: 'Traversy'},
+    {id: 3, firstName: 'Mary', lastName: 'Swanson'},
+  ];
+
+  res.json(customers);
+});
+>>>>>>> 8de77d172483a778fcc419b804b46a07b36b341a
 
 app.listen(PORT, () => {
   console.log(`Server is up on port ${PORT}`);
