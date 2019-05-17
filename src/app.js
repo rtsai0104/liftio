@@ -4,27 +4,26 @@ const path = require('path');
 const router = express.Router();
 const PORT = process.env.port || 5000;
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/index.html'));
-  //__dirname : It will resolve to your project folder.
+app.use(express.json());
+
+app.get('', (req, res) => {
+  res.send('HI');
 });
 
-router.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname+'/about.html'));
+app.post('/users/login', async (req, res) => {
+  setTimeout(() => {
+    res.status(201).send({
+      login: 'success'
+    });
+  }, 4000);
+
 });
 
-
-router.get('/sitemap',function(req,res){
-  res.sendFile(path.join(__dirname+'/sitemap.html'));
+app.post('/users/signup', async (req, res) => {
+  res.send({
+    signup: 'success'
+  });
 });
-
-//add the router
-app.use(express.static(__dirname + '/views'));
-//Store all HTML files in view folder.
-app.use(express.static(__dirname + '/scripts'));
-//Store all JS and CSS in Scripts folder.
-app.use('/', router);
-
 
 app.get('/api/customers', (req, res) => {
   const customers = [
