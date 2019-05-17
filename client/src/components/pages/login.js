@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signIn } from '../../store/actions/authActions';
+import { logIn } from '../../store/actions/authActions';
 
 class Login extends Component {
 
@@ -19,10 +19,12 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Submit email: ${this.state.email} pw: ${this.state.password}`);
-    this.props.signIn(this.state);
+    this.props.logIn(this.state);
   }
 
   render() {
+    const { authError, token } = this.props;
+    if (token) return <Redirect to='/' />
 
     return (
       <div>
@@ -49,10 +51,17 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    authError: state.auth.authError,
+    token: state.auth.token
+  };
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    signIn: (creds) => dispatch(signIn(creds))
+    logIn: (creds) => dispatch(logIn(creds))
   };
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
