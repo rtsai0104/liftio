@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { signUp } from '../../store/actions/authActions';
+import { connect } from 'react-redux';
 
 class SignUp extends Component {
 
@@ -18,7 +20,7 @@ class SignUp extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Submit fn: ${this.state.firstName} ln: ${this.state.lastName}`)
+    this.props.signUp(this.state);
   }
 
 
@@ -58,4 +60,10 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUp: (newUser) => dispatch(signUp(newUser))
+  };
+};
+
+export default connect(null, mapDispatchToProps)(SignUp);

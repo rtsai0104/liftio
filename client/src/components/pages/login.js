@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { signIn } from '../../store/actions/authActions';
 
 class Login extends Component {
 
@@ -11,12 +13,13 @@ class Login extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
-    })
+    });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Submit email: ${this.state.email} pw: ${this.state.password}`);
+    this.props.signIn(this.state);
   }
 
   render() {
@@ -46,4 +49,10 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (creds) => dispatch(signIn(creds))
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Login);
