@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
-import Customers from './components/Customer/customers';
 import Login from './components/pages/login';
 import Main from './components/pages/main';
 import SignUp from './components/pages/signup';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
 

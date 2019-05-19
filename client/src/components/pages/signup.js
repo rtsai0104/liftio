@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { signUp } from '../../store/actions/authActions';
 import { connect } from 'react-redux';
+import { Button, Form } from 'react-bootstrap';
 
 class SignUp extends Component {
 
@@ -28,9 +29,11 @@ class SignUp extends Component {
 
     return (
       <div>
-        <div>Sign Up</div>
+        <NavLink to="/login"><Button variant="primary">Sign In</Button></NavLink>
+        <div>
+          <Button variant="primary">Sign Up</Button>
+        </div>
         <form onSubmit={this.handleSubmit}>
-          <h5>Sign Up</h5>
           <div>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
@@ -48,13 +51,12 @@ class SignUp extends Component {
             <input type="text" id="lastName" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Submit</button>
+            <Button variant="outline-primary">Submit</Button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
         </form>
-        <NavLink to="/">Back</NavLink>
       </div>
     );
   }
