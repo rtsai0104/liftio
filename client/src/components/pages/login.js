@@ -27,7 +27,7 @@ class Login extends Component {
     if (token) return <Redirect to='/' />
 
     return (
-      <div>
+      <div className ="container">
         <form onSubmit={this.handleSubmit}>
           <h5>Sign In</h5>
           <div>
@@ -39,13 +39,13 @@ class Login extends Component {
             <input type="password" id="password" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn btn-default">Login</button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
         </form>
-        <NavLink to="/">Back</NavLink>
+        <NavLink to="/"><button className = "btn btn-default">Back</button></NavLink>
       </div>
     );
   }

@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/*
+.container{
+  margin: 100px auto;
+  background-color: gray;
+  width: 500px;
+}
+
+ button{
+  background-color: rgb(40, 118, 199);
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(67, 144, 224);
+  transition: .2s;
+
+}
+
+button:active{
+  background-color: rgb(67, 144, 224);
+}
+
+li a{
+  color: white;
+  text-decoration: none;
+}
+
+ul{
+  margin: 0;
+}
+
+
+.switch{
+  background-color: red;
+}
+*/

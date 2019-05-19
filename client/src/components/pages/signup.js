@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { signUp } from '../../store/actions/authActions';
 import { connect } from 'react-redux';
-
+import 'bootstrap/dist/css/bootstrap.css';
 class SignUp extends Component {
 
   state = {
@@ -27,11 +27,11 @@ class SignUp extends Component {
   render() {
 
     return (
-      <div>
+      <div className = "container">
         <div>Sign Up</div>
         <form onSubmit={this.handleSubmit}>
           <h5>Sign Up</h5>
-          <div>
+          <div class="form-group">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
           </div>
@@ -48,13 +48,13 @@ class SignUp extends Component {
             <input type="text" id="lastName" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Submit</button>
+            <button className="btn btn-default">Submit</button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
         </form>
-        <NavLink to="/">Back</NavLink>
+        <NavLink to="/"><button className="btn btn-default">Back</button></NavLink>
       </div>
     );
   }
