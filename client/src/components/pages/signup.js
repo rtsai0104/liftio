@@ -21,6 +21,7 @@ class SignUp extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state);
     this.props.signUp(this.state);
   }
 
@@ -29,34 +30,63 @@ class SignUp extends Component {
 
     return (
       <div>
-        <NavLink to="/login"><Button variant="primary">Sign In</Button></NavLink>
         <div>
-          <Button variant="primary">Sign Up</Button>
+          <NavLink to="/login"><Button variant="primary">Sign In</Button></NavLink>
         </div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
-          </div>
+        <div>
+          <NavLink to="/signup"><Button variant="primary">Sign Up</Button></NavLink>
+        </div>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group>
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              required
+              id="email"
+              onChange={this.handleChange}
+              type="email"
+              placeholder="Enter email"
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              required
+              id="password"
+              onChange={this.handleChange}
+              type="password"
+              placeholder="Enter password"
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>First Name</Form.Label>
+            <Form.Control
+              required
+              id="firstName"
+              onChange={this.handleChange}
+              type="text"
+              placeholder="First Name"
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control
+              required
+              id="lastName"
+              onChange={this.handleChange}
+              type="text"
+              placeholder="Last Name"
+            />
+          </Form.Group>
           <div className="input-field">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <Button variant="outline-primary">Submit</Button>
+            <Button variant="outline-primary" type="Submit">Submit</Button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
-        </form>
+        </Form>
       </div>
     );
   }

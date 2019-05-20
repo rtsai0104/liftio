@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import Login from './components/pages/login';
 import Main from './components/pages/main';
 import SignUp from './components/pages/signup';
@@ -18,11 +19,14 @@ class App extends Component {
               <li><NavLink to="/signup">Sign Up</NavLink></li>
             </ul>
           </header>
-          <Switch>
-            <Route exact path='/' component={Main} />
-            <Route path='/login' component={Login} />
-            <Route path='/signup' component={SignUp} />
-          </Switch>
+          <Container>
+            <Switch>
+              <Route exact path='/' component={Main} />
+              <Route path='/login' component={Login} />
+              <Route path='/signup' component={SignUp} />
+            </Switch>
+          </Container>
+
         </div>
       </BrowserRouter>
     )
