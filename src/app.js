@@ -1,7 +1,7 @@
 const express = require('express');
-// require('./db/mongoose');
-
 const app = express();
+const path = require('path');
+const router = express.Router();
 const PORT = process.env.port || 5000;
 
 app.use(express.json());
