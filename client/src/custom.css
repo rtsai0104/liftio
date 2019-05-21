@@ -1,0 +1,28 @@
+#root, body, html{
+}
+
+
+.custom-center{
+  width: 320px;
+  height: 568px;
+  padding: 20px;
+  margin: 200px auto;
+  border: 2px gray solid;
+  overflow: auto;
+  background: white;
+}
+
+.custom-header{
+  margin: -20px -20px 20px;
+  width: 316px;
+  height: 80px;
+  background: rgb(27, 27, 27);
+  background-image: url('assets/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+Navlink{
+  margin: 20px;
+}
