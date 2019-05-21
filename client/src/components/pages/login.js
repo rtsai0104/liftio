@@ -29,10 +29,9 @@ class Login extends Component {
 
     return (
       <div>
-        <div>
-          <Button variant="primary">Sign In</Button>
-        </div>
+      <div className="custom-header"></div>
         <Form onSubmit={this.handleSubmit}>
+        <h1>Sign In</h1>
         <Form.Group>
           <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -57,16 +56,18 @@ class Login extends Component {
             />
           </Form.Group>
           <div className="input-field">
-            <Button variant="outline-primary" type="Submit">Login</Button>
+            <Button variant="outline-primary" type="Submit" block>Login</Button>
+            <Form.Text className="text-muted">
+              Need to make an account?
+            </Form.Text>
+            <NavLink to="/signup"><Button variant="primary" block>Sign Up</Button></NavLink>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
         </Form>
-        <div>
-          <NavLink to="/signup"><Button variant="primary">Sign Up</Button></NavLink>
-        </div>
-        
+
+
       </div>
     );
   }

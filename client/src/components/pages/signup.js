@@ -30,13 +30,9 @@ class SignUp extends Component {
 
     return (
       <div>
-        <div>
-          <NavLink to="/login"><Button variant="primary">Sign In</Button></NavLink>
-        </div>
-        <div>
-          <NavLink to="/signup"><Button variant="primary">Sign Up</Button></NavLink>
-        </div>
+        <div className="custom-header"></div>
         <Form onSubmit={this.handleSubmit}>
+          <h1>Sign Up</h1>
           <Form.Group>
             <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -81,12 +77,16 @@ class SignUp extends Component {
             />
           </Form.Group>
           <div className="input-field">
-            <Button variant="outline-primary" type="Submit">Submit</Button>
+            <Button variant="outline-primary" type="Submit" block>Submit</Button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
           </div>
         </Form>
+          <Form.Text className="text-muted">
+            Already have an account?
+          </Form.Text>
+          <NavLink to="/login"><Button variant="primary" block>Sign In</Button></NavLink>
       </div>
     );
   }
