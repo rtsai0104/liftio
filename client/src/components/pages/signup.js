@@ -77,7 +77,7 @@ class SignUp extends Component {
             />
           </Form.Group>
           <div className="input-field">
-            <Button variant="outline-primary" type="Submit" block>Submit</Button>
+            <Button variant="primary" type="Submit" block>Submit</Button>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
@@ -86,7 +86,7 @@ class SignUp extends Component {
           <Form.Text className="text-muted">
             Already have an account?
           </Form.Text>
-          <NavLink to="/login"><Button variant="primary" block>Sign In</Button></NavLink>
+          <NavLink to="/login"><Button variant="outline-primary" block>Sign In</Button></NavLink>
       </div>
     );
   }

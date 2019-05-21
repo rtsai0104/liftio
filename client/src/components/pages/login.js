@@ -56,11 +56,12 @@ class Login extends Component {
             />
           </Form.Group>
           <div className="input-field">
-            <Button variant="outline-primary" type="Submit" block>Login</Button>
+            {/* <Button variant="outline-primary" type="Submit" block>Login</Button> */}
+            <NavLink to="/profile"><Button variant="primary" block>Login</Button></NavLink>
             <Form.Text className="text-muted">
               Need to make an account?
             </Form.Text>
-            <NavLink to="/signup"><Button variant="primary" block>Sign Up</Button></NavLink>
+            <NavLink to="/signup"><Button variant="outline-primary" block>Sign Up</Button></NavLink>
             <div className="red-text center">
               {/* { authError ? <p>{ authError }</p> : null } */}
             </div>
