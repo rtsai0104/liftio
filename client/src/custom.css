@@ -8,7 +8,7 @@
   padding: 20px;
   margin: 200px auto;
   border: 2px gray solid;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: auto;
   background: white;
 }
@@ -16,7 +16,8 @@
 .custom-header{
   margin: -20px -20px 20px;
   width: 316px;
-  height: 80px;
+  height: 60px;
+  border: 10px rgb(27, 27, 27) solid;
   background: rgb(27, 27, 27);
   background-image: url('assets/logo.png');
   background-size: contain;
@@ -27,7 +28,7 @@
 .custom-banner{
   margin: -20px -20px 20px;
   width: 316px;
-  padding: 20px;
+  padding: 10px;
   background: rgb(27, 27, 27);
   background-image: url('assets/mini-logo.png');
   background-size: contain;
@@ -49,12 +50,18 @@ h5{
 .custom-profile{
   width: 316px;
   margin: -20px -20px 20px;
-  background-image: linear-gradient(to right, rgb(0, 79, 255), rgb(28, 207, 255));
+  background-image: url('assets/banner-background.jpg');
+  background-size: auto;
+  background-position: bottom;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+}
 
+.button-container{
+ display: flex;
+ flex-direction: column;
 }
 
 NavLink{
@@ -62,6 +69,12 @@ NavLink{
   text-decoration: none;
 }
 
-Button{
+.btn{
   text-decoration: none;
+  margin: 10px 0;
+}
+
+
+.white{
+  color: white;
 }
