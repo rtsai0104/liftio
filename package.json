@@ -5,6 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "client-install": "cd client && npm install",
+    "lint-server": "./node_modules/.bin/eslint src/**",
+    "lint-client": "./node_modules/.bin/eslint client/src/**",
     "start": "node src/server.js",
     "server": "nodemon src/server.js",
     "client": "npm start --prefix client",
@@ -30,6 +32,7 @@
     "uikit": "^3.1.4"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "nodemon": "^1.19.0"
   }
 }
