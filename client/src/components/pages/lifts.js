@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { Button, Form, Image } from 'react-bootstrap';
-import SplitButtons from '../elements/splitButtons';
+import LiftButtons from '../elements/liftButtons';
 import '../../assets/open-iconic-master/font/css/open-iconic-bootstrap.css'
 
-class Splits extends Component {
+class Lifts extends Component {
 
   state = {
-    splits: [
-      {name: 'Chest & Tris'},
-      {name: 'Back & Bis'},
-      {name: 'Arms'},
-      {name: 'Legs'},
-      {name: 'Cardio'}
+    lifts: [
+      {name: 'Bench Press'},
+      {name: 'Chest Flys'},
+      {name: 'Cable Flys'},
+      {name: 'Pushups'},
+      {name: 'Skullcrushers'},
+      {name: 'Dips'},
     ]
   }
 
@@ -20,19 +21,19 @@ class Splits extends Component {
 
   render() {
 
-    const { splits } = this.state;
+    const { lifts } = this.state;
     return (
       <div>
 
         <div className="custom-banner">
-          <NavLink to="/profile">
+          <NavLink to="/splits">
             <span className="oi oi-caret-left white" title="caret left" aria-hidden="true"></span>
           </NavLink>
         </div>
-        <h1>Splits</h1>
+        <h1>Lifts</h1>
 
         <div className="button-container">
-        <SplitButtons splits={splits} />
+        <LiftButtons lifts={lifts} />
         </div>
         <div className="text-center">
         <span className="oi oi-plus add white" title="add" aria-hidden="true" ></span>
@@ -43,4 +44,4 @@ class Splits extends Component {
   }
 }
 
-export default Splits;
+export default Lifts;

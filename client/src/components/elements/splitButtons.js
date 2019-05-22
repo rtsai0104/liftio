@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const SplitButtons = (props) => {
@@ -7,7 +8,7 @@ const SplitButtons = (props) => {
     <div>
       { splits && splits.map(split => {
         return (
-          <Button>{ split.name }</Button>
+          <NavLink to="/lifts"><Button variant="primary" size="lg" block>{ split.name }</Button></NavLink>
         )
       })}
     </div>

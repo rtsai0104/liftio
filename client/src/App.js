@@ -5,6 +5,7 @@ import Main from './components/pages/main';
 import SignUp from './components/pages/signup';
 import Profile from './components/pages/profile';
 import Splits from './components/pages/splits';
+import Lifts from './components/pages/lifts';
 import './custom.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -28,6 +29,7 @@ class App extends Component {
               <Route path='/signup' component={SignUp} />
               <Route path='/profile' component={Profile} />
               <Route path='/splits' component={Splits} />
+              <Route path='/lifts' component={Lifts} />
             </Switch>
           </div>
       </BrowserRouter>

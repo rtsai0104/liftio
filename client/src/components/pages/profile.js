@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { Button, Form, Image } from 'react-bootstrap';
-import SplitButtons from '../elements/splitButtons';
 import '../../assets/open-iconic-master/font/css/open-iconic-bootstrap.css'
 
 class Profile extends Component {
@@ -9,7 +8,6 @@ class Profile extends Component {
   state = {
     name: 'John Doe',
     lastworkout: '5/16/2019',
-    splits: [{name: 'Chest'}, {name: 'Arms'}]
   }
 
   render() {
@@ -34,7 +32,7 @@ class Profile extends Component {
           <NavLink to=""><Button variant="primary" size="lg" block>View Data</Button></NavLink>
         </div>
 
-        <SplitButtons splits={splits} />
+
 
       </div>
     );
