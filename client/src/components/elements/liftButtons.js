@@ -10,7 +10,7 @@ const LiftButtons = (props) => {
     <div>
       { lifts && lifts.map(lift => {
         return (
-          <Button variant="primary" size="lg" block>{ lift.name }</Button>
+          <NavLink to="/liftdata"><Button variant="primary" size="lg" block>{ lift.name }</Button></NavLink>
         )
       })}
     </div>

@@ -6,6 +6,8 @@ import SignUp from './components/pages/signup';
 import Profile from './components/pages/profile';
 import Splits from './components/pages/splits';
 import Lifts from './components/pages/lifts';
+import LiftData from './components/pages/liftdata';
+import Append from './components/elements/append';
 import './custom.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -30,6 +32,8 @@ class App extends Component {
               <Route path='/profile' component={Profile} />
               <Route path='/splits' component={Splits} />
               <Route path='/lifts' component={Lifts} />
+              <Route path='/liftdata' component={LiftData} />
+              <Route path='/append' component={Append} />
             </Switch>
           </div>
       </BrowserRouter>
