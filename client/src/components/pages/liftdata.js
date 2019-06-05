@@ -19,7 +19,16 @@ class LiftData extends Component {
       let data = [...this.state.data, set];
       this.setState({
         data: data
-      })
+      });
+  }
+
+  render() {
+    return (
+      <div>
+        This is the lift page lmao
+        <Append />
+      </div>
+    )
   }
 
 

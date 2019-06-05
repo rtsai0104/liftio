@@ -8,52 +8,53 @@ class Append extends Component {
     reps: null,
   }
 
-handleChange = (e) => {
-  this.setState({
-    [e.target.id]: e.target.value
-  })
-}
-handleSubmit = (e) => {
-  e.preventDefault();
-  this.props.append(this.state);
-}
-render() {
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.append(this.state);
+  }
 
-  const { data } = this.state;
-  return (
-    <div>
+  render() {
 
-      <div className="custom-banner">
-        <NavLink to="/lifts">
-          <span className="oi oi-caret-left white" title="caret left" aria-hidden="true"></span>
-        </NavLink>
-      </div>
-      <h2>Add Sets</h2>
+    const { data } = this.state;
+    return (
+      <div>
 
-      <Form.Group>
-          <Form.Control
-            required
-            id="weight"
-            onChange={this.handleChange}
-            type="int"
-            placeholder="Enter Weight"
-          />
-        </Form.Group>
+        <div className="custom-banner">
+          <NavLink to="/lifts">
+            <span className="oi oi-caret-left white" title="caret left" aria-hidden="true"></span>
+          </NavLink>
+        </div>
+        <h2>Add Sets</h2>
+
         <Form.Group>
-          <Form.Control
-            required
-            id="reps"
-            onChange={this.handleChange}
-            type="int"
-            placeholder="Reps"
-          />
-        </Form.Group>
-      <div className="text-center">
-      <span className="oi oi-plus add white" title="add" aria-hidden="true" ></span>
+            <Form.Control
+              required
+              id="weight"
+              onChange={this.handleChange}
+              type="int"
+              placeholder="Enter Weight"
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              required
+              id="reps"
+              onChange={this.handleChange}
+              type="int"
+              placeholder="Reps"
+            />
+          </Form.Group>
+        <div className="text-center">
+        <span className="oi oi-plus add white" title="add" aria-hidden="true" ></span>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 }
 
-export default Append
+export default Append;
