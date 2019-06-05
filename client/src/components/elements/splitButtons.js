@@ -8,7 +8,9 @@ const SplitButtons = (props) => {
     <div>
       { splits && splits.map(split => {
         return (
-          <NavLink to="/lifts"><Button variant="primary" size="lg" block>{ split.name }</Button></NavLink>
+          <NavLink to="/lifts" key={split.name}>
+            <Button variant="primary" size="lg" block>{ split.name }</Button>
+          </NavLink>
         )
       })}
     </div>
