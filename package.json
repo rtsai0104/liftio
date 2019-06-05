@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
+    "install-all": "npm i && npm run client-install",
     "client-install": "cd client && npm install",
     "lint-server": "npx eslint src/**",
     "lint-client": "./node_modules/.bin/eslint client/src/**",
@@ -32,9 +33,6 @@
     "uikit": "^3.1.4"
   },
   "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
     "nodemon": "^1.19.0"
   }
 }
