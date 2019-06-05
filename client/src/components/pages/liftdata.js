@@ -25,7 +25,6 @@ class LiftData extends Component {
   render() {
     return (
       <div>
-        This is the lift page lmao
         <Append />
       </div>
     )
