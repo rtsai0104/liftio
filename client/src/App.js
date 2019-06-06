@@ -33,7 +33,6 @@ class App extends Component {
               <Route path='/splits' component={Splits} />
               <Route path='/lifts' component={Lifts} />
               <Route path='/liftdata' component={LiftData} />
-              <Route path='/append' component={Append} />
             </Switch>
           </div>
       </BrowserRouter>

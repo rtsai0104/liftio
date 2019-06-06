@@ -4,6 +4,7 @@ import { Button, Form, Image } from 'react-bootstrap';
 
 class Append extends Component {
   state = {
+    id: null,
     weight: null,
     reps: null,
   }
@@ -15,22 +16,18 @@ class Append extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({
+       ...this.state,
+       id: Math.random()
+    })
     this.props.append(this.state);
+    console.log('Submitted');
   }
 
   render() {
-
-    const { data } = this.state;
     return (
       <div>
-
-        <div className="custom-banner">
-          <NavLink to="/lifts">
-            <span className="oi oi-caret-left white" title="caret left" aria-hidden="true"></span>
-          </NavLink>
-        </div>
-        <h2>Add Sets</h2>
-
+      <Form onSubmit={e => this.handleSubmit(e)}>
         <Form.Group>
             <Form.Control
               required
@@ -49,9 +46,9 @@ class Append extends Component {
               placeholder="Reps"
             />
           </Form.Group>
-        <div className="text-center">
-        <span className="oi oi-plus add white" title="add" aria-hidden="true" ></span>
-        </div>
+          <Button type="submit">Add</Button>
+          </Form>
+
       </div>
     );
   }
