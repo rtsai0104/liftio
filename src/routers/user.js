@@ -1,5 +1,5 @@
 const express = require('express');
-// const multer = require('multer'); /
+// const multer = require('multer');
 const router = new express.Router();
 const auth = require('../middleware/auth');
 
@@ -96,7 +96,6 @@ router.delete('/users/me', auth, async (req, res) => {
   try {
 
     await req.user.remove();
-    sendCancelationEmail(req.user.email, req.user.name);
     res.send(req.user);
   } catch (e) {
     res.status(500).send(e);

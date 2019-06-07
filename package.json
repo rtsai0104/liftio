@@ -9,12 +9,16 @@
     "server": "nodemon src/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
+    
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rtsai0104/liftio.git"
   },
   "keywords": [],
+  "jest": {
+    "testEnvironment": "node"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -25,11 +29,13 @@
     "bcrypt": "^3.0.6",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.4",
-    "mongoose": "^5.5.7",
-    "uikit": "^3.1.4"
+    "mongoose": "^5.5.7"
   },
   "devDependencies": {
+    "env-cmd": "^9.0.3",
+    "jest": "^24.8.0",
     "nodemon": "^1.19.0"
   }
 }
